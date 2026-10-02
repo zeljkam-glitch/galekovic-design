@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://galekovic-design.hr/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/"/><xhtml:link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/"/></url>
+  <url><loc>https://galekovic-design.hr/en/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/"/><xhtml:link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/"/></url>
+  <url><loc>https://galekovic-design.hr/projekti/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/projekti/"/><xhtml:link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/projects/"/></url>
+  <url><loc>https://galekovic-design.hr/en/projects/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/projekti/"/><xhtml:link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/projects/"/></url>
+  <url><loc>https://galekovic-design.hr/proizvodi/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/proizvodi/"/><xhtml:link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/products/"/></url>
+  <url><loc>https://galekovic-design.hr/en/products/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/proizvodi/"/><xhtml:link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/products/"/></url>
+  <url><loc>https://galekovic-design.hr/savjeti/</loc></url>
+  <url><loc>https://galekovic-design.hr/alati/</loc></url>
+</urlset>

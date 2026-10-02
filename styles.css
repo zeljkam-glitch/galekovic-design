@@ -23,6 +23,11 @@ footer img{width:32px;height:38px;object-fit:contain;filter:invert(1)}
   .contact-link{gap:16px;font-size:10px;overflow-wrap:anywhere}
 }
 
+/* Product and archive entry points */
+.section-link{display:flex;justify-content:space-between;align-items:center;margin-top:54px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.05em;text-transform:uppercase;transition:padding .2s ease}.section-link:hover{padding-left:10px;padding-right:10px}.product-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product-preview-grid img{height:clamp(300px,35vw,540px);object-fit:cover;background:#e8e2d8}.product-preview-grid span{display:block;margin-top:12px;color:var(--muted);font-size:11px}.product-preview-grid h3{margin:6px 0 4px;font-size:clamp(26px,2.8vw,43px);font-weight:400;line-height:1;text-transform:uppercase;letter-spacing:-.04em}.product-preview-grid p{margin:0;font-size:9px;line-height:1.35;text-transform:uppercase}.product-preview-grid a img{transition:filter .35s ease,transform .35s ease}.product-preview-grid a:hover img{filter:contrast(1.05);transform:scale(.992)}
+.menu{gap:clamp(15px,2vw,34px)}
+@media(max-width:760px){.product-preview-grid{grid-template-columns:1fr;gap:42px}.product-preview-grid img{height:112vw;max-height:520px}.section-link{margin-top:38px}}
+
 /* Calmer headline rhythm: no touching lines and less compressed kerning. */
 .hero h1,.panel h2,.process h2{line-height:.94;letter-spacing:-.035em}
 .service-grid h3{line-height:1;letter-spacing:-.03em}
