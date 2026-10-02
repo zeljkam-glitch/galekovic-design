@@ -137,6 +137,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .form-note{margin:-6px 0 0!important;font-size:10px!important;line-height:1.45!important;text-transform:none!important;color:rgba(21,19,17,.65)}
 .mobile-contact{display:none}
 
+.newsletter-panel{display:grid;grid-template-columns:minmax(0,.9fr) minmax(440px,1.1fr);gap:8vw;color:#fff;background:var(--black)}
+.newsletter-panel .panel-kicker{color:rgba(255,255,255,.58)}
+.newsletter-panel h2{max-width:700px;margin:48px 0 0;text-wrap:balance}
+.newsletter-content{align-self:end}
+.newsletter-content>p{max-width:620px;margin:0 0 42px;font-size:14px;line-height:1.55}
+.newsletter-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 12px;align-items:end}
+.newsletter-email{display:grid;gap:9px;min-width:0;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.newsletter-email input{width:100%;min-height:52px;padding:13px 0;border:0;border-bottom:1px solid rgba(255,255,255,.6);border-radius:0;color:#fff;background:transparent;font:400 17px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;appearance:none}
+.newsletter-email input::placeholder{color:rgba(255,255,255,.48)}
+.newsletter-form button{min-height:52px;padding:14px 18px;border:1px solid #fff;display:flex;align-items:center;justify-content:space-between;gap:46px;color:var(--ink);background:#fff;font-size:10px;text-transform:uppercase;cursor:pointer;transition:color .2s ease,background .2s ease}
+.newsletter-form button:hover{color:#fff;background:transparent}
+.newsletter-form button:disabled{cursor:wait;opacity:.55}
+.newsletter-consent{grid-column:1/3;display:flex;align-items:flex-start;gap:10px;max-width:670px;color:rgba(255,255,255,.7);font-size:10px;line-height:1.5}
+.newsletter-consent input{width:15px;height:15px;margin:1px 0 0;flex:0 0 auto;accent-color:#fff}
+.newsletter-status{grid-column:1/3;min-height:1.5em;margin:0;color:rgba(255,255,255,.76);font-size:10px;line-height:1.5}
+
 @media(max-width:980px) and (min-width:761px){
   .menu{gap:18px}
   .nav{padding:0 24px}
@@ -172,4 +188,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .inquiry-form{padding:22px 0}
   .inquiry-form input,.inquiry-form select,.inquiry-form textarea{font-size:16px}
   .mobile-contact{position:fixed;z-index:50;left:8px;right:8px;bottom:8px;min-height:48px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;color:#fff;background:var(--black);border:1px solid rgba(255,255,255,.35);font-size:11px;text-transform:uppercase;box-shadow:0 8px 28px rgba(0,0,0,.24)}
+  .newsletter-panel{grid-template-columns:1fr;gap:52px}
+  .newsletter-content>p{margin-bottom:32px;font-size:13px}
+  .newsletter-form{grid-template-columns:1fr}
+  .newsletter-email input{font-size:16px}
+  .newsletter-form button{width:100%}
+  .newsletter-consent,.newsletter-status{grid-column:1}
 }

@@ -73,6 +73,45 @@ document.querySelectorAll('.inquiry-form').forEach((form) => {
   });
 });
 
+document.querySelectorAll('.newsletter-form').forEach((form) => {
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const isEnglish = form.dataset.language === 'en';
+    const button = form.querySelector('button[type="submit"]');
+    const status = form.querySelector('.newsletter-status');
+    const data = new FormData(form);
+    button.disabled = true;
+    status.textContent = isEnglish ? 'Submitting…' : 'Prijava je u tijeku…';
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: data.get('email'),
+          consent: data.get('consent') === 'on',
+          source: data.get('source'),
+          language: form.dataset.language
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'Newsletter signup failed.');
+      form.reset();
+      status.textContent = isEnglish
+        ? 'Thank you. Your subscription has been confirmed.'
+        : 'Hvala. Vaša prijava je potvrđena.';
+    } catch (error) {
+      status.textContent = isEnglish
+        ? 'The Airtable connection is not active yet. Please try again later.'
+        : 'Povezivanje s Airtableom još nije aktivno. Pokušajte ponovno kasnije.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+});
+
 const mobileContact = document.querySelector('.mobile-contact');
 const contactSection = document.querySelector('.faq-contact');
 if (mobileContact && contactSection) {
