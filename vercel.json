@@ -7,7 +7,7 @@
     { "source": "/contact.html", "destination": "/#kontakt", "permanent": true },
     { "source": "/blog", "destination": "/savjeti/", "permanent": true },
     { "source": "/blog.html", "destination": "/savjeti/", "permanent": true },
-    { "source": "/blog/9/sto-cini-kuhinju-dobrom-kuhinjom.html", "destination": "/savjeti/#dobra-kuhinja", "permanent": true },
+    { "source": "/blog/9/sto-cini-kuhinju-dobrom-kuhinjom.html", "destination": "/savjeti/namjestaj-po-mjeri-ili-gotovi/", "permanent": true },
     { "source": "/blog/2/utjecaj-boja-na-percepciju-prostora.html", "destination": "/savjeti/", "permanent": true },
     { "source": "/blog/1/kako-boje-u-interijeru-utjecu-na-nase-raspolozenje.html", "destination": "/savjeti/", "permanent": true },
     { "source": "/proizvodi/22/bookmark-table.html", "destination": "/proizvodi/#bookmark-table", "permanent": true },
