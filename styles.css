@@ -109,6 +109,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .menu a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:8px;height:1px;background:currentColor;transition:right .2s ease}
 .menu a:not(.nav-cta):hover::after,.menu a.active::after{right:0}
 .hero h1{max-width:1260px;font-size:clamp(54px,6.4vw,104px);line-height:.96;letter-spacing:-.045em;text-wrap:balance}
+.hero h1 strong{font-weight:700}
 .hero-bottom p{font-size:12px;line-height:1.48;text-transform:none;max-width:470px}
 .primary-link{width:max-content;min-height:46px;padding:15px 18px;display:inline-flex;align-items:center;justify-content:space-between;gap:36px;color:var(--ink);background:#fff;font-size:10px;text-transform:uppercase;transition:transform .2s ease,background .2s ease}
 .primary-link:hover{transform:translateY(-2px);background:var(--ivory)}
