@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interaktivni projekt planer Galeković Designa za odabir usluge, pripremu briefa, budžeta i namještaja po mjeri." />
+  <title>Projekt planer | Galeković Design</title>
+  <link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+  <a class="skip-link" href="#planer">Preskoči na alate</a>
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Galeković Design, povratak na početnu">
+      <span><b>Galeković</b><em>Design</em></span>
+      <img src="../assets/brand/galekovic-monogram-transparent.png" alt="" />
+    </a>
+    <nav><a href="../#usluge">Usluge</a><a href="../#projekti">Projekti</a><a class="back-link" href="../">Natrag na web ↖</a></nav>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="eyebrow">Projekt planer / demo</div>
+      <h1>Što projekt<br />stvarno treba?</h1>
+      <div class="hero-meta">
+        <p>Šest kratkih alata pretvara početnu ideju u jasan projektni brief. Bez registracije i bez spremanja podataka.</p>
+        <a href="#planer">Pokrenite planer <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="planner" id="planer">
+      <aside class="tool-nav" aria-label="Odabir alata">
+        <div class="tool-nav-title">Odaberite alat</div>
+        <button class="active" type="button" data-tool="preporuka"><span>01</span> Preporuka usluge</button>
+        <button type="button" data-tool="usporedba"><span>02</span> Usporedba usluga</button>
+        <button type="button" data-tool="namjestaj"><span>03</span> Planer namještaja</button>
+        <button type="button" data-tool="brief"><span>04</span> Projektni brief</button>
+        <button type="button" data-tool="hospitality"><span>05</span> Hospitality brief</button>
+        <button type="button" data-tool="budzet"><span>06</span> Planer budžeta</button>
+      </aside>
+
+      <div class="tool-stage">
+        <section class="tool-panel active" id="preporuka" tabindex="-1">
+          <header class="panel-head"><div><span>01 / Preporuka usluge</span><h2>Koliko podrške projekt treba?</h2></div><p>Četiri odgovora dovoljna su za početnu preporuku.</p></header>
+          <form id="recommendation-form" class="question-form">
+            <fieldset><legend>U kojoj je fazi prostor?</legend><div class="choice-grid"><label><input type="radio" name="stage" value="concept" required /><span>Tek razmatram mogućnosti</span></label><label><input type="radio" name="stage" value="furniture" /><span>Postoji tlocrt ili idejno rješenje</span></label><label><input type="radio" name="stage" value="complete" /><span>Uskoro počinju radovi</span></label></div></fieldset>
+            <fieldset><legend>Treba li razviti namještaj po mjeri?</legend><div class="choice-grid"><label><input type="radio" name="custom" value="concept" required /><span>Ne ili još nije poznato</span></label><label><input type="radio" name="custom" value="furniture" /><span>Da, nekoliko ključnih elemenata</span></label><label><input type="radio" name="custom" value="complete" /><span>Da, veći dio prostora</span></label></div></fieldset>
+            <fieldset><legend>Tko će voditi izvedbu?</legend><div class="choice-grid"><label><input type="radio" name="delivery" value="concept" required /><span>Izvedbu organiziram samostalno</span></label><label><input type="radio" name="delivery" value="furniture" /><span>Treba tehnička razrada</span></label><label><input type="radio" name="delivery" value="complete" /><span>Treba koordinacija do završetka</span></label></div></fieldset>
+            <button class="action" type="submit">Prikažite preporuku <span>↘</span></button>
+          </form>
+          <div class="result" id="recommendation-result" aria-live="polite" hidden></div>
+        </section>
+
+        <section class="tool-panel" id="usporedba" tabindex="-1" hidden>
+          <header class="panel-head"><div><span>02 / Usporedba usluga</span><h2>Označite što projektu treba.</h2></div><p>Tablica odmah ističe paket koji najbolje pokriva odabrani opseg.</p></header>
+          <div class="need-selector" id="need-selector">
+            <label><input type="checkbox" value="layout" /><span>Tlocrt i organizacija prostora</span></label>
+            <label><input type="checkbox" value="visual" /><span>Vizualni smjer i materijali</span></label>
+            <label><input type="checkbox" value="custom" /><span>Namještaj po mjeri</span></label>
+            <label><input type="checkbox" value="technical" /><span>Tehnička dokumentacija</span></label>
+            <label><input type="checkbox" value="coordination" /><span>Koordinacija izvođača</span></label>
+            <label><input type="checkbox" value="delivery" /><span>Kontrola završne izvedbe</span></label>
+          </div>
+          <div class="comparison" aria-live="polite">
+            <article data-package="concept"><span>001</span><h3>Koncept interijera</h3><ul><li>✓ Tlocrtno rješenje</li><li>✓ Smjer uređenja</li><li>✓ Paleta materijala</li><li>○ Namještaj po mjeri</li><li>○ Koordinacija izvedbe</li></ul></article>
+            <article data-package="furniture"><span>002</span><h3>Interijer + namještaj</h3><ul><li>✓ Sve iz koncepta</li><li>✓ Tehnička razrada</li><li>✓ Namještaj po mjeri</li><li>○ Koordinacija izvedbe</li><li>○ Završna kontrola</li></ul></article>
+            <article data-package="complete"><span>003</span><h3>Cjelovit interijer</h3><ul><li>✓ Cjelovit projekt</li><li>✓ Namještaj po mjeri</li><li>✓ Proizvodnja</li><li>✓ Koordinacija izvođača</li><li>✓ Završna kontrola</li></ul></article>
+          </div>
+          <p class="comparison-note" id="comparison-note">Označite barem jednu potrebu.</p>
+        </section>
+
+        <section class="tool-panel" id="namjestaj" tabindex="-1" hidden>
+          <header class="panel-head"><div><span>03 / Planer namještaja po mjeri</span><h2>Što prostor treba po mjeri?</h2></div><p>Pripremite početni popis za tehničku razradu.</p></header>
+          <form class="brief-form" id="furniture-form">
+            <div class="two-col"><label>Prostorija<select name="room" required><option value="">Odaberite prostoriju</option><option>Kuhinja</option><option>Dnevni boravak</option><option>Spavaća soba</option><option>Kupaonica</option><option>Radni prostor</option><option>Ostava</option></select></label><label>Približne dimenzije<input name="dimensions" placeholder="npr. zid 320 cm, visina 265 cm" /></label></div>
+            <fieldset><legend>Potrebni elementi</legend><div class="check-grid"><label><input type="checkbox" name="elements" value="Kuhinja" /> Kuhinja</label><label><input type="checkbox" name="elements" value="Ugradbeni ormari" /> Ugradbeni ormari</label><label><input type="checkbox" name="elements" value="Kupaonski namještaj" /> Kupaonski namještaj</label><label><input type="checkbox" name="elements" value="TV element" /> TV element</label><label><input type="checkbox" name="elements" value="Radni stol" /> Radni prostor</label><label><input type="checkbox" name="elements" value="Ostava" /> Ostava</label></div></fieldset>
+            <label>Uređaji i tehnički zahtjevi<textarea name="appliances" rows="3" placeholder="Ugradbeni uređaji, rasvjeta, utičnice, ventilacija..."></textarea></label>
+            <label>Navike i posebne potrebe<textarea name="needs" rows="3" placeholder="Što se sprema, tko koristi prostor, što sada ne funkcionira..."></textarea></label>
+            <button class="action" type="submit">Složite popis <span>↘</span></button>
+          </form>
+          <div class="result" id="furniture-result" aria-live="polite" hidden></div>
+        </section>
+
+        <section class="tool-panel" id="brief" tabindex="-1" hidden>
+          <header class="panel-head"><div><span>04 / Pametni projektni brief</span><h2>Sve bitno za prvi razgovor.</h2></div><p>Podaci se ne spremaju. Alat priprema sažetak koji se može kopirati ili poslati emailom.</p></header>
+          <form class="brief-form" id="project-brief-form">
+            <div class="two-col"><label>Vrsta prostora<select name="space" required><option value="">Odaberite</option><option>Stan</option><option>Kuća</option><option>Vila za odmor</option><option>Poslovni prostor</option><option>Hospitality</option></select></label><label>Lokacija i kvadratura<input name="location" required placeholder="npr. Zagreb, 95 m²" /></label></div>
+            <div class="two-col"><label>Faza projekta<select name="stage"><option>Novogradnja u planiranju</option><option>Adaptacija postojećeg prostora</option><option>Radovi su započeli</option><option>Prostor je završen i treba opremanje</option></select></label><label>Željeni početak<input type="month" name="start" /></label></div>
+            <label>Najvažnije potrebe<textarea name="needs" rows="4" required placeholder="Tko koristi prostor, što treba riješiti i koji su prioriteti?"></textarea></label>
+            <label>Tlocrt ili fotografije<input type="file" name="files" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple /><small>Demo prikazuje odabrane datoteke. Privici se dodaju u email nakon otvaranja poruke.</small></label>
+            <button class="action" type="submit">Pripremite brief <span>↘</span></button>
+          </form>
+          <div class="result" id="project-brief-result" aria-live="polite" hidden></div>
+        </section>
+
+        <section class="tool-panel" id="hospitality" tabindex="-1" hidden>
+          <header class="panel-head"><div><span>05 / Hospitality brief</span><h2>Prostor koji mora dobro raditi.</h2></div><p>Uz atmosferu, hospitality projekt mora odgovoriti na operativne potrebe, održavanje i rok otvaranja.</p></header>
+          <form class="brief-form" id="hospitality-form">
+            <div class="two-col"><label>Tip objekta<select name="property" required><option value="">Odaberite</option><option>Boutique hotel</option><option>Vila za odmor</option><option>Restoran ili bar</option><option>Apartmanski objekt</option><option>Drugo</option></select></label><label>Kapacitet<input name="capacity" required placeholder="broj soba, jedinica ili mjesta" /></label></div>
+            <div class="two-col"><label>Planirano otvaranje<input type="month" name="opening" /></label><label>Faza projekta<select name="stage"><option>Početna ideja</option><option>Arhitektonski projekt postoji</option><option>Adaptacija</option><option>Radovi su u tijeku</option></select></label></div>
+            <label>Profil gosta i željeni doživljaj<textarea name="guest" rows="3" placeholder="Kome je prostor namijenjen i kako se gost treba osjećati?"></textarea></label>
+            <label>Operativni zahtjevi<textarea name="operations" rows="3" placeholder="Održavanje, protok osoblja, skladištenje, otpornost materijala..."></textarea></label>
+            <button class="action" type="submit">Pripremite hospitality brief <span>↘</span></button>
+          </form>
+          <div class="result" id="hospitality-result" aria-live="polite" hidden></div>
+        </section>
+
+        <section class="tool-panel" id="budzet" tabindex="-1" hidden>
+          <header class="panel-head"><div><span>06 / Planer budžeta</span><h2>Raspodjela, ne lažna procjena.</h2></div><p>Alat ne izračunava cijenu projekta. Pomaže vidjeti kako se ukupni okvir može rasporediti među glavnim kategorijama.</p></header>
+          <div class="budget-total"><label>Okvir ulaganja<input id="budget-total" type="number" min="10000" step="1000" value="120000" /></label><span>EUR</span></div>
+          <div class="budget-sliders" id="budget-sliders">
+            <label><span>Građevinski i obrtnički radovi <b>25%</b></span><input type="range" min="0" max="60" value="25" data-label="Građevinski i obrtnički radovi" /></label>
+            <label><span>Namještaj po mjeri <b>30%</b></span><input type="range" min="0" max="60" value="30" data-label="Namještaj po mjeri" /></label>
+            <label><span>Rasvjeta, oprema i uređaji <b>15%</b></span><input type="range" min="0" max="60" value="15" data-label="Rasvjeta, oprema i uređaji" /></label>
+            <label><span>Gotov namještaj, tekstil i dekoracija <b>20%</b></span><input type="range" min="0" max="60" value="20" data-label="Gotov namještaj, tekstil i dekoracija" /></label>
+            <label><span>Rezerva <b>10%</b></span><input type="range" min="0" max="30" value="10" data-label="Rezerva" /></label>
+          </div>
+          <div class="budget-status" id="budget-status" aria-live="polite"></div>
+          <div class="budget-breakdown" id="budget-breakdown"></div>
+          <p class="disclaimer">Ovo je alat za razgovor o prioritetima, a ne ponuda ni procjena tržišne cijene. Stvarni budžet ovisi o prostoru, opsegu, materijalima, rokovima i stanju projekta.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="closing">
+      <span>Sljedeći korak / 07</span>
+      <h2>Plan je jasniji.<br />Sada pošaljite tlocrt.</h2>
+      <p>Jelena će na temelju tlocrta, lokacije i kratkog briefa procijeniti odgovara li projekt i koji je sljedeći korak.</p>
+      <a href="mailto:info@galekovic-design.hr?subject=Upit%20za%20projekt">info@galekovic-design.hr <b>↗</b></a>
+    </section>
+  </main>
+
+  <footer><a href="../">Galeković Design</a><span>Projekt planer / demo</span><span>© <i id="year"></i></span></footer>
+  <script src="tools.js"></script>
+</body>
+</html>

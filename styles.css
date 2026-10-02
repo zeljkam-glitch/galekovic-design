@@ -40,6 +40,8 @@ footer img{width:32px;height:38px;object-fit:contain;filter:invert(1)}
 .article-body p{margin:0 0 16px;font-size:12px;line-height:1.62}
 
 .tools-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;gap:16px}
+.tools-launch{margin:-22px 0 32px;padding:19px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:12px;text-transform:uppercase;transition:padding .2s ease}
+.tools-launch:hover{padding-left:10px;padding-right:10px}.tools-launch b{font-size:9px;font-weight:400;letter-spacing:.08em}
 .service-finder,.tool-card{min-width:0;min-height:390px;padding:25px;border:1px solid var(--line)}
 .service-finder{color:#fff;background:var(--black)}
 .service-finder>span,.tool-card summary>span{font-size:8px;text-transform:uppercase;letter-spacing:.11em}
@@ -60,6 +62,7 @@ footer img{width:32px;height:38px;object-fit:contain;filter:invert(1)}
   .panel h2,.process h2{line-height:1.01;letter-spacing:-.02em}
   .service-grid h3{line-height:1.04;letter-spacing:-.02em}
   .journal-grid,.tools-grid{grid-template-columns:1fr}
+  .tools-launch{margin:-8px 0 28px;min-height:52px}
   .article-card h3{min-height:0;margin:38px 0 18px;font-size:34px;line-height:1.05}
   .article-card summary p{min-height:0;margin-bottom:30px}
   .article-card{padding-bottom:28px}
