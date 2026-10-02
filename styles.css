@@ -91,3 +91,73 @@ footer{grid-template-columns:1fr auto auto}
   footer>span:nth-of-type(1){display:none}
   footer>span:nth-of-type(2){display:block}
 }
+
+/* UX refinement: clearer actions, readable supporting copy and an easier enquiry path. */
+.skip-link{position:fixed;top:10px;left:10px;z-index:1000;padding:12px 16px;background:#fff;color:var(--ink);font-size:12px;text-transform:uppercase;transform:translateY(-150%);transition:transform .2s ease}
+.skip-link:focus{transform:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.brand{width:auto;height:48px;display:flex;align-items:center;gap:6px}
+.brand>span{display:grid;justify-items:start;font-size:9px;font-weight:500;line-height:.92;letter-spacing:.06em;text-transform:uppercase;transform:translateY(2px)}
+.brand>span b,.brand>span em{font:inherit;font-style:normal}
+.brand img{width:36px;height:44px;flex:0 0 auto}
+.nav-cta{min-height:36px;padding:12px 15px!important;border:1px solid rgba(255,255,255,.65);display:inline-flex;align-items:center;transition:color .2s ease,background .2s ease}
+.nav-cta:hover{color:var(--ink);background:#fff}
+.menu a:not(.nav-cta){position:relative;padding:14px 0}
+.menu a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:100%;bottom:8px;height:1px;background:currentColor;transition:right .2s ease}
+.menu a:not(.nav-cta):hover::after,.menu a.active::after{right:0}
+.hero h1{max-width:1260px;font-size:clamp(54px,6.4vw,104px);line-height:.96;letter-spacing:-.045em;text-wrap:balance}
+.hero-bottom p{font-size:12px;line-height:1.48;text-transform:none;max-width:470px}
+.primary-link{width:max-content;min-height:46px;padding:15px 18px;display:inline-flex;align-items:center;justify-content:space-between;gap:36px;color:var(--ink);background:#fff;font-size:10px;text-transform:uppercase;transition:transform .2s ease,background .2s ease}
+.primary-link:hover{transform:translateY(-2px);background:var(--ivory)}
+.underline-link{min-height:42px;padding-top:13px;font-size:10px}
+.small-copy,.section-head>p,.service-grid p,.project-copy,.process-intro p,.process li p,.contact-block>p{font-size:11px;line-height:1.55}
+.faq summary{min-height:50px;padding:4px 0;align-items:center;font-size:13px;line-height:1.35}
+.faq details p{font-size:13px;line-height:1.65;margin:10px 0 6px 25px}
+.contact-block>p{max-width:520px;text-transform:none}
+.inquiry-form{display:grid;gap:18px;margin:34px 0 28px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.inquiry-form label{display:grid;gap:8px;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.inquiry-form input,.inquiry-form select,.inquiry-form textarea{width:100%;border:1px solid var(--line);border-radius:0;padding:13px 12px;color:var(--ink);background:rgba(255,255,255,.2);font:400 14px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:none;appearance:none}
+.inquiry-form textarea{resize:vertical;min-height:110px}
+.inquiry-form input::placeholder,.inquiry-form textarea::placeholder{color:rgba(21,19,17,.48)}
+.form-submit{min-height:50px;padding:14px 16px;border:0;display:flex;align-items:center;justify-content:space-between;color:#fff;background:var(--black);font-size:10px;text-transform:uppercase;cursor:pointer;transition:opacity .2s ease}
+.form-submit:hover{opacity:.83}
+.form-note{margin:-6px 0 0!important;font-size:10px!important;line-height:1.45!important;text-transform:none!important;color:rgba(21,19,17,.65)}
+.mobile-contact{display:none}
+
+@media(max-width:980px) and (min-width:761px){
+  .menu{gap:18px}
+  .nav{padding:0 24px}
+  .brand>span{display:none}
+  .faq-contact{grid-template-columns:1fr;gap:70px}
+  .contact-block{padding:70px 0 0;border-left:0;border-top:1px solid var(--line)}
+}
+
+@media(max-width:760px){
+  body{padding-bottom:62px}
+  .nav{background:linear-gradient(180deg,rgba(0,0,0,.32),transparent)}
+  .brand{gap:5px}
+  .brand>span{display:grid;font-size:8px}
+  .brand img{width:32px;height:39px}
+  .menu-button{min-width:54px;min-height:44px;padding:0;border:1px solid rgba(255,255,255,.55)}
+  .menu{gap:0;padding:18px 24px 28px;border-top:1px solid rgba(255,255,255,.2)}
+  .menu a:not(.nav-cta){width:100%;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:12px}
+  .menu a:not(.nav-cta)::after{display:none}
+  .menu .nav-cta{width:100%;margin-top:18px;justify-content:center;font-size:11px}
+  .language-switch{margin-top:20px;font-size:11px}
+  .hero-content{padding-top:38px}
+  .hero h1{font-size:clamp(42px,11.6vw,58px);line-height:.98;letter-spacing:-.035em}
+  .hero-bottom{gap:12px}
+  .hero-bottom p{font-size:12px;line-height:1.45;margin-bottom:8px}
+  .primary-link,.underline-link{width:100%;min-height:48px}
+  .primary-link{font-size:11px}
+  .underline-link{display:flex;justify-content:space-between;align-items:center;font-size:11px}
+  .underline-link span{margin-left:auto}
+  .small-copy,.section-head>p,.service-grid p,.project-copy,.process-intro p,.process li p,.contact-block>p{font-size:12px;line-height:1.55}
+  .faq summary{font-size:13px}
+  .faq details p{margin-left:22px;font-size:13px}
+  .form-row{grid-template-columns:1fr}
+  .inquiry-form{padding:22px 0}
+  .inquiry-form input,.inquiry-form select,.inquiry-form textarea{font-size:16px}
+  .mobile-contact{position:fixed;z-index:50;left:8px;right:8px;bottom:8px;min-height:48px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;color:#fff;background:var(--black);border:1px solid rgba(255,255,255,.35);font-size:11px;text-transform:uppercase;box-shadow:0 8px 28px rgba(0,0,0,.24)}
+}

@@ -44,27 +44,28 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#sadrzaj">Preskoči na sadržaj</a>
   <header class="hero" id="top">
     <img class="hero-image" src="assets/projects/samobor-02.jpg" alt="Izvedeni interijer stana u Samoboru" />
     <div class="hero-shade"></div>
     <nav class="nav" aria-label="Glavna navigacija">
-      <a class="brand" href="#top" aria-label="Galeković Design, početna"><img src="assets/brand/galekovic-monogram-transparent.png" alt="" /></a>
+      <a class="brand" href="#top" aria-label="Galeković Design, početna"><span><b>Galeković</b><em>Design</em></span><img src="assets/brand/galekovic-monogram-transparent.png" alt="" /></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Izbornik</button>
       <div class="menu" id="menu">
-        <a href="#studio">Jelena</a><a href="#projekti">Projekti</a><a href="#usluge">Usluge</a><a href="#proces">Proces</a><a href="#kontakt">Kontakt</a><span class="language-switch"><b>HR</b><i>/</i><a href="en/">EN</a></span>
+        <a href="#studio">Jelena</a><a href="#usluge">Usluge</a><a href="#projekti">Projekti</a><a href="#proces">Proces</a><a class="nav-cta" href="#kontakt">Pošaljite tlocrt</a><span class="language-switch"><b>HR</b><i>/</i><a href="en/">EN</a></span>
       </div>
     </nav>
     <div class="hero-content">
-      <h1>Dizajn koji zna<br />kako se izvodi.</h1>
+      <h1>Između ideje i izvedbe<br />ne smije biti razlike.</h1>
       <div class="hero-bottom">
-        <p>Jelena Galeković već 17 godina projektira interijere. Blizina proizvodnje znači da se svaki materijal, spoj i detalj razmatra prije izvedbe.</p>
-        <a class="underline-link" href="#kontakt">Pošaljite tlocrt <span>↘</span></a>
+        <p>17 godina iskustva i izravno razumijevanje proizvodnje. Odluke se rješavaju prije nego postanu skupe izmjene na gradilištu.</p>
+        <a class="primary-link" href="#kontakt">Pošaljite tlocrt <span>↘</span></a>
         <a class="underline-link" href="#projekti">Pogledajte projekte <span>↓</span></a>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="sadrzaj">
     <section class="panel intro-panel reveal" id="studio">
       <div class="panel-kicker">Jelena / 01</div>
       <h2>Iza svakog projekta<br />stoji Jelena Galeković.</h2>
@@ -199,11 +200,20 @@
         <div class="panel-kicker">Kontakt / 10</div>
         <h2>Imate prostor?<br />Pošaljite tlocrt.</h2>
         <p>Za početnu procjenu dovoljni su lokacija, okvirna kvadratura, faza projekta, tlocrt i kratak opis potreba.</p>
+        <form class="inquiry-form" data-language="hr">
+          <div class="form-row"><label>Ime i prezime<input name="name" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label></div>
+          <div class="form-row"><label>Tip prostora<select name="type"><option>Privatni interijer</option><option>Hospitality ili B2B</option><option>Još nije odlučeno</option></select></label><label>Lokacija i kvadratura<input name="location" placeholder="npr. Zagreb, 95 m²" /></label></div>
+          <label>Što prostoru treba?<textarea name="message" rows="4" placeholder="Faza projekta, željeni rok i najvažnije potrebe"></textarea></label>
+          <button class="form-submit" type="submit">Sastavite upit <span>↗</span></button>
+          <p class="form-note">Otvorit će se pripremljena poruka u vašem email programu. Tlocrt možete dodati kao privitak.</p>
+        </form>
         <a class="contact-link" href="mailto:info@galekovic-design.hr">info@galekovic-design.hr <span>↗</span></a>
         <a class="contact-link" href="tel:+385919395377">+385 91 939 5377 <span>↗</span></a>
       </div>
     </section>
   </main>
+
+  <a class="mobile-contact" href="#kontakt">Pošaljite tlocrt <span>↘</span></a>
 
   <footer><a class="footer-brand" href="#top" aria-label="Galeković Design, povratak na vrh"><span class="footer-wordmark"><b>Galeković</b><em>Design</em></span><img src="assets/brand/galekovic-monogram-transparent.png" alt="" /></a><span>Mraclin · Velika Gorica</span><span>© <i id="year"></i></span></footer>
   <script src="script.js"></script>
