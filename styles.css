@@ -100,7 +100,7 @@ footer{grid-template-columns:1fr auto auto}
 .skip-link:focus{transform:none}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .brand{width:auto;height:48px;display:flex;align-items:center;gap:6px}
-.brand>span{display:grid;justify-items:start;font-size:9px;font-weight:500;line-height:.92;letter-spacing:.06em;text-transform:uppercase;transform:translateY(2px)}
+.brand>span{display:grid;justify-items:start;font-size:9px;font-weight:500;line-height:.92;letter-spacing:.06em;text-transform:uppercase;transform:translateY(-3px)}
 .brand>span b,.brand>span em{font:inherit;font-style:normal}
 .brand img{width:36px;height:44px;flex:0 0 auto}
 .nav-cta{min-height:36px;padding:12px 15px!important;border:1px solid rgba(255,255,255,.65);display:inline-flex;align-items:center;transition:color .2s ease,background .2s ease}
