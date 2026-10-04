@@ -7,3 +7,18 @@
 @media(max-width:760px){.blog-index-grid{grid-template-columns:1fr}.blog-card{min-height:370px}.article-page{padding:48px 24px}.breadcrumb{margin-bottom:48px}.article-header h1{font-size:clamp(40px,11vw,58px);line-height:1.06;letter-spacing:-.02em}.article-layout{grid-template-columns:1fr;margin-top:54px}.article-toc{position:static}.answer-box p{font-size:17px}.article-body-main p,.article-body-main li{font-size:16px}.inner-hero h1{font-size:clamp(42px,11vw,58px);line-height:1.04;letter-spacing:-.02em}}
 .company-data-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.company-data-grid div{min-height:130px;padding:22px 22px 22px 0;display:flex;flex-direction:column;justify-content:space-between;border-bottom:1px solid var(--line)}.company-data-grid div:nth-child(odd){border-right:1px solid var(--line)}.company-data-grid div:nth-child(even){padding-left:22px}.company-data-grid b{color:var(--muted);font-size:9px;font-weight:400;letter-spacing:.08em;text-transform:uppercase}.company-data-grid strong{font-size:clamp(18px,2vw,28px);font-weight:400;line-height:1.2}.verified-links{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}.verified-links a,.social-directory a{display:flex;justify-content:space-between;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:10px;text-transform:uppercase}.social-directory{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.social-directory a{min-height:150px;flex-direction:column}.social-directory b{font-size:18px;font-weight:400;text-transform:none}
 @media(max-width:680px){.company-data-grid,.verified-links,.social-directory{grid-template-columns:1fr}.company-data-grid div:nth-child(odd){border-right:0}.company-data-grid div:nth-child(even){padding-left:0}.social-directory a{min-height:110px}}
+
+/* Replace browser disclosure triangles with the diagonal brand slash. */
+summary{list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::marker{content:""}
+.article-faq summary{display:flex;align-items:baseline;gap:10px}
+.article-faq summary::before{content:"/";flex:0 0 auto;font-weight:600;line-height:1}
+
+/* Diacritic-safe vertical rhythm for Croatian display type. */
+.inner-hero h1,.section-intro h2,.catalog-card h2,.catalog-card h3,.product-copy h2,.project-card h2,.long-article h2,.blog-card h2,.article-header h1{line-height:1.1}
+.article-body-main h2{line-height:1.22}
+
+@media(max-width:760px){
+  .inner-hero h1,.article-header h1{line-height:1.12}
+}

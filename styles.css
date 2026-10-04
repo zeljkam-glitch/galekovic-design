@@ -255,3 +255,12 @@ footer{grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
   .footer-legal,.footer-meta{min-width:0}
   .footer-meta a{overflow-wrap:anywhere}
 }
+
+/* Give Croatian diacritics clear vertical space in stacked display headings. */
+.hero h1,.panel h2,.process h2{line-height:1.04}
+.service-grid h3,.article-card h3,.article-card-link h3,.service-finder h3,.tool-card h3{line-height:1.1}
+
+@media(max-width:760px){
+  .hero h1,.panel h2,.process h2{line-height:1.08}
+  .service-grid h3,.article-card h3,.article-card-link h3,.service-finder h3,.tool-card h3{line-height:1.12}
+}
