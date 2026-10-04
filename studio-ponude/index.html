@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="description" content="Interni alat za izradu ponuda Galeković Designa." />
+  <title>Ponude / Galeković Design</title>
+  <link rel="stylesheet" href="ponude.css" />
+</head>
+<body>
+  <a class="skip-link" href="#editor">Preskoči na uređivanje ponude</a>
+
+  <header class="app-header">
+    <a class="brand" href="../" aria-label="Galeković Design, povratak na web">
+      <span><b>Galeković</b><em>Design</em></span>
+      <img src="../assets/brand/galekovic-monogram-transparent.png" alt="" />
+    </a>
+    <div class="app-name"><span>Interni alat</span><strong>/ Ponude</strong></div>
+    <div class="header-actions">
+      <button type="button" class="quiet-button" id="new-offer">Nova ponuda</button>
+      <button type="button" class="primary-button" id="save-offer">Spremi skicu</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="drafts" aria-label="Spremljene ponude">
+      <div class="drafts-head">
+        <span>Skice u pregledniku</span>
+        <b id="draft-count">0</b>
+      </div>
+      <div class="draft-list" id="draft-list"></div>
+      <p class="storage-note">Skice ostaju samo u ovom pregledniku. Brisanjem podataka preglednika brišu se i skice.</p>
+    </aside>
+
+    <section class="editor" id="editor">
+      <div class="editor-intro">
+        <div>
+          <span class="section-label">Nova ponuda / radna verzija</span>
+          <h1>Ponuda bez<br />rupa u dogovoru.</h1>
+        </div>
+        <p>Unesite konkretan opseg, cijenu, rok i granice usluge. Pregled ponude slaže se automatski i spreman je za PDF.</p>
+      </div>
+
+      <form id="offer-form" autocomplete="off">
+        <section class="form-section">
+          <header><span>01</span><h2>Osnovni podaci</h2></header>
+          <div class="form-grid three">
+            <label>Broj ponude<input name="offerNumber" required /></label>
+            <label>Datum ponude<input name="offerDate" type="date" required /></label>
+            <label>Vrijedi do<input name="validUntil" type="date" required /></label>
+          </div>
+          <div class="form-grid two">
+            <label>Klijent ili tvrtka<input name="clientName" placeholder="Ime i prezime ili naziv tvrtke" required /></label>
+            <label>Kontakt<input name="clientContact" placeholder="Email ili telefon" /></label>
+            <label>Naziv projekta<input name="projectName" placeholder="Primjer: Uređenje stana Maksimir" required /></label>
+            <label>Lokacija projekta<input name="projectLocation" placeholder="Grad, adresa ili oznaka prostora" /></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <header><span>02</span><h2>Što se nudi</h2></header>
+          <div class="form-grid two">
+            <label>Vrsta ponude
+              <select name="servicePreset" id="service-preset">
+                <option value="custom">Ponuda po mjeri</option>
+                <option value="concept">Koncept interijera</option>
+                <option value="furniture">Interijer i namještaj po mjeri</option>
+                <option value="complete">Cjelovit interijer</option>
+              </select>
+            </label>
+            <label>Predviđeni početak<input name="startTiming" placeholder="Primjer: u roku 10 radnih dana od uplate" /></label>
+          </div>
+          <label>Sažetak projekta<textarea name="projectSummary" rows="4" placeholder="Što prostor treba riješiti i koji je cilj projekta?"></textarea></label>
+
+          <div class="line-items-head">
+            <div><span>Stavke ponude</span><small>Svaka stavka treba imenovati konkretnu isporuku.</small></div>
+            <button type="button" class="quiet-button" id="add-item">Dodaj stavku</button>
+          </div>
+          <div class="line-items" id="line-items"></div>
+          <div class="price-controls">
+            <label>Popust (%)<input name="discount" type="number" min="0" max="100" step="0.01" value="0" /></label>
+            <label>PDV (%)<input name="taxRate" type="number" min="0" max="100" step="0.01" value="0" /></label>
+            <label>Porezna napomena<input name="taxNote" placeholder="Primjer: PDV nije uključen u cijenu" /></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <header><span>03</span><h2>Granice ponude</h2></header>
+          <div class="form-grid two textareas">
+            <label>U cijenu je uključeno<textarea name="included" rows="8" placeholder="Jedna stavka u svaki red"></textarea></label>
+            <label>U cijenu nije uključeno<textarea name="excluded" rows="8" placeholder="Jedna stavka u svaki red"></textarea></label>
+          </div>
+          <div class="form-grid two textareas">
+            <label>Obveze klijenta<textarea name="clientDuties" rows="6" placeholder="Podaci, odluke, izmjere, pristup prostoru..."></textarea></label>
+            <label>Izmjene i dodatni rad<textarea name="changes" rows="6">Ponuda uključuje dva kruga izmjena unutar dogovorenog opsega. Naknadne izmjene, novi zahtjevi i rad izvan navedenog opsega ugovaraju se i obračunavaju zasebno prije početka dodatnog rada.</textarea></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <header><span>04</span><h2>Rokovi i plaćanje</h2></header>
+          <div class="form-grid two textareas">
+            <label>Planirani rok<textarea name="timeline" rows="5" placeholder="Trajanje, faze i što može utjecati na rok"></textarea></label>
+            <label>Dinamika plaćanja<textarea name="paymentTerms" rows="5" placeholder="Primjer: 40% pri prihvatu, 40% nakon koncepta, 20% prije predaje"></textarea></label>
+            <label>Uvjeti početka<textarea name="startConditions" rows="5">Rad počinje nakon pisanog prihvata ponude, uplate dogovorenog predujma i primitka svih podloga potrebnih za početak projekta.</textarea></label>
+            <label>Završna napomena<textarea name="finalNote" rows="5">Prihvatom ponude potvrđuje se razumijevanje navedenog opsega, rokova, cijene i uvjeta suradnje.</textarea></label>
+          </div>
+        </section>
+      </form>
+    </section>
+
+    <aside class="preview-shell" aria-label="Pregled ponude">
+      <div class="preview-toolbar">
+        <span>Pregled za klijenta</span>
+        <div>
+          <button type="button" class="quiet-button" id="copy-offer">Kopiraj tekst</button>
+          <button type="button" class="primary-button" id="print-offer">Spremi PDF</button>
+        </div>
+      </div>
+      <article class="offer-preview" id="offer-preview"></article>
+    </aside>
+  </main>
+
+  <template id="line-item-template">
+    <div class="line-item">
+      <label class="item-description">Opis stavke<input data-field="description" placeholder="Primjer: Idejno rješenje interijera" /></label>
+      <label>Količina<input data-field="quantity" type="number" min="0" step="0.01" value="1" /></label>
+      <label>Jedinica<input data-field="unit" value="paušal" /></label>
+      <label>Cijena<input data-field="price" type="number" min="0" step="0.01" value="0" /></label>
+      <button type="button" class="remove-item" aria-label="Ukloni stavku">×</button>
+    </div>
+  </template>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="ponude.js"></script>
+</body>
+</html>
