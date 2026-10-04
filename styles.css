@@ -210,3 +210,21 @@ footer{grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
   .site-credit{order:-1;flex:1 0 100%;line-height:1.5}
   .footer-legal span,.footer-meta span{display:inline!important}
 }
+
+/* Clear service boundaries reduce scope assumptions before the first enquiry. */
+.scope-exclusion{display:block;max-width:330px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;line-height:1.5;text-transform:uppercase;color:rgba(21,19,17,.68)}
+.scope-guardrails{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scope-guardrails>div{min-height:210px;padding:22px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.scope-guardrails>div:last-child{border-right:0}
+.scope-guardrails span{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.scope-guardrails strong{margin:42px 0 12px;font-size:18px;line-height:1.1;text-transform:uppercase;font-weight:500}
+.scope-guardrails p{margin:auto 0 0;font-size:11px;line-height:1.55}
+
+@media(max-width:760px){
+  .scope-exclusion{max-width:none;font-size:11px}
+  .scope-guardrails{grid-template-columns:1fr;margin-top:44px}
+  .scope-guardrails>div{min-height:0;padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .scope-guardrails>div:last-child{border-bottom:0}
+  .scope-guardrails strong{margin:24px 0 12px;font-size:20px}
+  .scope-guardrails p{margin:0;font-size:12px}
+}

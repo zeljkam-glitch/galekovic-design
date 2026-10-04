@@ -67,8 +67,8 @@ document.querySelectorAll('.inquiry-form').forEach((form) => {
     const isEnglish = form.dataset.language === 'en';
     const subject = isEnglish ? `Project enquiry: ${data.get('type')}` : `Upit za projekt: ${data.get('type')}`;
     const lines = isEnglish
-      ? [`Name: ${data.get('name')}`, `Email: ${data.get('email')}`, `Project type: ${data.get('type')}`, `Location and area: ${data.get('location') || '-'}`, '', `Project details: ${data.get('message') || '-'}`]
-      : [`Ime i prezime: ${data.get('name')}`, `Email: ${data.get('email')}`, `Vrsta projekta: ${data.get('type')}`, `Lokacija i kvadratura: ${data.get('location') || '-'}`, '', `Opis projekta: ${data.get('message') || '-'}`];
+      ? [`Name: ${data.get('name')}`, `Email: ${data.get('email')}`, `Project type: ${data.get('type')}`, `Location and area: ${data.get('location') || '-'}`, `Investment range: ${data.get('budget') || '-'}`, `Preferred start: ${data.get('start') || '-'}`, '', `Project details: ${data.get('message') || '-'}`]
+      : [`Ime i prezime: ${data.get('name')}`, `Email: ${data.get('email')}`, `Vrsta projekta: ${data.get('type')}`, `Lokacija i kvadratura: ${data.get('location') || '-'}`, `Okvir ulaganja: ${data.get('budget') || '-'}`, `Željeni početak: ${data.get('start') || '-'}`, '', `Opis projekta: ${data.get('message') || '-'}`];
     window.location.href = `mailto:info@galekovic-design.hr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
   });
 });

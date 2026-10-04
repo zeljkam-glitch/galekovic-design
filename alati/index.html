@@ -19,7 +19,7 @@
 
   <main>
     <section class="tool-hero">
-      <div class="eyebrow">Projekt planer / demo</div>
+      <div class="eyebrow">Projekt planer / priprema upita</div>
       <h1>Što projekt<br />stvarno treba?</h1>
       <div class="hero-meta">
         <p>Šest kratkih alata pretvara početnu ideju u jasan projektni brief. Bez registracije i bez spremanja podataka.</p>
@@ -65,7 +65,7 @@
             <article data-package="furniture"><span>002</span><h3>Interijer + namještaj</h3><ul><li>✓ Sve iz koncepta</li><li>✓ Tehnička razrada</li><li>✓ Namještaj po mjeri</li><li>○ Koordinacija izvedbe</li><li>○ Završna kontrola</li></ul></article>
             <article data-package="complete"><span>003</span><h3>Cjelovit interijer</h3><ul><li>✓ Cjelovit projekt</li><li>✓ Namještaj po mjeri</li><li>✓ Proizvodnja</li><li>✓ Koordinacija izvođača</li><li>✓ Završna kontrola</li></ul></article>
           </div>
-          <p class="comparison-note" id="comparison-note">Označite barem jednu potrebu.</p>
+          <p class="comparison-note" id="comparison-note">Označite barem jednu potrebu. Pregled prikazuje tipičan opseg usluge; konkretne isporuke, broj izmjena, obilasci, proizvodnja, montaža, rok i naknada uvijek se definiraju individualnom ponudom. Stavka označena s ○ nije uključena u standardni opseg.</p>
         </section>
 
         <section class="tool-panel" id="namjestaj" tabindex="-1" hidden>
@@ -86,7 +86,7 @@
             <div class="two-col"><label>Vrsta prostora<select name="space" required><option value="">Odaberite</option><option>Stan</option><option>Kuća</option><option>Vila za odmor</option><option>Poslovni prostor</option><option>Hospitality</option></select></label><label>Lokacija i kvadratura<input name="location" required placeholder="npr. Zagreb, 95 m²" /></label></div>
             <div class="two-col"><label>Faza projekta<select name="stage"><option>Novogradnja u planiranju</option><option>Adaptacija postojećeg prostora</option><option>Radovi su započeli</option><option>Prostor je završen i treba opremanje</option></select></label><label>Željeni početak<input type="month" name="start" /></label></div>
             <label>Najvažnije potrebe<textarea name="needs" rows="4" required placeholder="Tko koristi prostor, što treba riješiti i koji su prioriteti?"></textarea></label>
-            <label>Tlocrt ili fotografije<input type="file" name="files" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple /><small>Demo prikazuje odabrane datoteke. Privici se dodaju u email nakon otvaranja poruke.</small></label>
+            <label>Tlocrt ili fotografije<input type="file" name="files" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple /><small>Datoteke se ovdje ne prenose ni spremaju. Nakon otvaranja pripremljenog emaila dodajte ih kao privitke.</small></label>
             <button class="action" type="submit">Pripremite brief <span>↘</span></button>
           </form>
           <div class="result" id="project-brief-result" aria-live="polite" hidden></div>
@@ -129,7 +129,7 @@
     </section>
   </main>
 
-  <footer><a href="../">Galeković Design</a><span>Projekt planer / demo</span><span>© <i id="year"></i></span></footer>
+  <footer><a href="../">Galeković Design</a><span>Projekt planer</span><span>© <i id="year"></i></span></footer>
   <script src="tools.js"></script>
 </body>
 </html>

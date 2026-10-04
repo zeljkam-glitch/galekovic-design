@@ -8,7 +8,7 @@
   <link rel="alternate" hreflang="hr" href="https://galekovic-design.hr/" />
   <link rel="alternate" hreflang="en" href="https://galekovic-design.hr/en/" />
   <link rel="alternate" hreflang="x-default" href="https://galekovic-design.hr/" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles.css?v=20261004-2" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,7 +39,9 @@
           {"@type":"Question","name":"How long does an interior design project take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on the size and condition of the space, the scope of service and the amount of custom furniture. A realistic schedule is set after reviewing the floor plan and project brief."}},
           {"@type":"Question","name":"How is the interior budget defined?","acceptedAnswer":{"@type":"Answer","text":"The estimate covers construction and trade work, equipment, lighting, furniture, delivery, installation and contingency. A single price per square metre is rarely reliable because every project has a different scope."}},
           {"@type":"Question","name":"Can I commission only part of the service?","acceptedAnswer":{"@type":"Answer","text":"Yes. The available options are Interior Concept, Interior and Custom Furniture, or Complete Interior with coordination and delivery."}},
-          {"@type":"Question","name":"Is custom furniture included?","acceptedAnswer":{"@type":"Answer","text":"Yes. Furniture is developed as part of the interior, with technical detailing of materials, hardware, joints, lighting and installation."}},
+          {"@type":"Question","name":"Is custom furniture included?","acceptedAnswer":{"@type":"Answer","text":"It depends on the selected service. It is not included in the standard Interior Concept scope. When listed in the proposal, materials, hardware, joints, lighting and installation are developed in detail."}},
+          {"@type":"Question","name":"What does contractor coordination mean?","acceptedAnswer":{"@type":"Answer","text":"Coordination connects project information, the decision schedule and communication with the contractors included in the proposal. It is not statutory construction supervision unless that service is agreed separately."}},
+          {"@type":"Question","name":"What happens if the project changes after approval?","acceptedAnswer":{"@type":"Answer","text":"Each stage is approved before work continues. A later change is assessed first because it may affect fees, documentation, production and timing."}},
           {"@type":"Question","name":"Are hospitality and B2B projects available?","acceptedAnswer":{"@type":"Answer","text":"Yes. The service is available for boutique hotels, villas, restaurants, offices and developer projects."}}
         ]
       }
@@ -101,9 +103,14 @@
         <p>The scope depends on whether the project needs a concept, detailed custom furniture design or full coordination through completion.</p>
       </div>
       <div class="service-grid">
-        <article><img src="../assets/projects/buzanova-01.jpg" alt="Interior concept for the Bužanova apartment" /><b>001</b><h3>Interior<br />Concept</h3><p>Floor plan, design direction, material palette and key visualisations.</p></article>
-        <article><img src="../assets/projects/bralo-01.jpg" alt="Interior design for Villa Bralo" /><b>002</b><h3>Interior + Custom<br />Furniture</h3><p>Interior design with technically developed custom furniture.</p></article>
-        <article><img src="../assets/projects/samobor-01.jpg" alt="Completed interior" /><b>003</b><h3>Complete<br />Interior</h3><p>Design, production, contractor coordination and final quality control.</p></article>
+        <article><img src="../assets/projects/buzanova-01.jpg" alt="Interior concept for the Bužanova apartment" /><b>001</b><h3>Interior<br />Concept</h3><p>Floor plan, design direction, material palette and key visualisations.</p><span class="scope-exclusion">Does not include technical documentation, custom furniture or implementation coordination.</span></article>
+        <article><img src="../assets/projects/bralo-01.jpg" alt="Interior design for Villa Bralo" /><b>002</b><h3>Interior + Custom<br />Furniture</h3><p>Interior concept, technical development and furniture designed for the specific space.</p><span class="scope-exclusion">Does not include contractor coordination or final quality control unless agreed separately.</span></article>
+        <article><img src="../assets/projects/samobor-01.jpg" alt="Completed interior" /><b>003</b><h3>Complete<br />Interior</h3><p>Design, production, contractor coordination and final quality control.</p><span class="scope-exclusion">Coordination is not statutory construction supervision. The exact implementation scope is defined in the proposal.</span></article>
+      </div>
+      <div class="scope-guardrails" aria-label="Important before the project begins">
+        <div><span>Before we begin / 01</span><strong>Everything is defined in the proposal</strong><p>Scope, deliverables, revisions, meetings, site visits, timing and fees are agreed before the project begins.</p></div>
+        <div><span>Boundaries / 02</span><strong>Only agreed work is included</strong><p>Production, purchasing, delivery, installation and coordination are included only when listed in the accepted proposal.</p></div>
+        <div><span>Changes / 03</span><strong>Approval closes each stage</strong><p>Later changes may affect the fee and schedule. Their impact is confirmed before work continues.</p></div>
       </div>
     </section>
 
@@ -202,7 +209,9 @@
         <details><summary>How is the budget defined?</summary><p>The estimate covers work, equipment, lighting, furniture, delivery, installation and contingency. A single price per square metre is not reliable because every space has a different scope.</p></details>
         <details><summary>Can I commission only part of the service?</summary><p>Yes. The available options are Interior Concept, Interior + Custom Furniture, and Complete Interior with coordination and delivery.</p></details>
         <details><summary>What should I send before the first conversation?</summary><p>A floor plan or measured sketch, photos of the space, location, approximate floor area, target schedule, a short description of needs and an initial budget range.</p></details>
-        <details><summary>Is custom furniture included?</summary><p>Yes. Furniture is developed as part of the interior, including materials, hardware, joints, lighting and installation.</p></details>
+        <details><summary>Is custom furniture included?</summary><p>It depends on the selected service. It is not included in the standard Interior Concept scope. When listed in the proposal, materials, hardware, joints, lighting and installation are developed in detail.</p></details>
+        <details><summary>What does contractor coordination mean?</summary><p>Coordination connects project information, the decision schedule and communication with the contractors included in the proposal. It is not statutory construction supervision unless that service is agreed separately.</p></details>
+        <details><summary>What happens if the project changes after approval?</summary><p>Each stage is approved before work continues. A later change is assessed first because it may affect fees, documentation, production and timing.</p></details>
         <details><summary>Are projects outside Zagreb possible?</summary><p>Yes. Site visits, measurements and coordination are planned according to location and project type.</p></details>
         <details><summary>Are hospitality and B2B projects available?</summary><p>Yes. The service is available for boutique hotels, villas, restaurants, offices and developer projects.</p></details>
       </div>
@@ -213,9 +222,10 @@
         <form class="inquiry-form" data-language="en">
           <div class="form-row"><label>Name<input name="name" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label></div>
           <div class="form-row"><label>Space type<select name="type"><option>Private interior</option><option>Hospitality or B2B</option><option>Not decided yet</option></select></label><label>Location and area<input name="location" placeholder="e.g. Zagreb, 95 m²" /></label></div>
+          <div class="form-row"><label>Investment range<input name="budget" placeholder="e.g. EUR 80,000–120,000 or not defined yet" /></label><label>Preferred start<input name="start" type="month" /></label></div>
           <label>What does the space need?<textarea name="message" rows="4" placeholder="Project stage, desired timeline and main requirements"></textarea></label>
-          <button class="form-submit" type="submit">Prepare enquiry <span>↗</span></button>
-          <p class="form-note">A prepared message will open in your email app. You can attach the floor plan there.</p>
+          <button class="form-submit" type="submit">Open prepared email <span>↗</span></button>
+          <p class="form-note">This is an initial enquiry, not a confirmed booking or order. A prepared message will open in your email app; it is not sent until you send the email yourself. You can attach the floor plan there.</p>
         </form>
         <a class="contact-link" href="mailto:info@galekovic-design.hr">info@galekovic-design.hr <span>↗</span></a>
         <a class="contact-link" href="tel:+385919395377">+385 91 939 5377 <span>↗</span></a>
@@ -244,6 +254,6 @@
     <div class="footer-legal"><span>Galeković Design j.d.o.o.</span><span>Braće Radića 111, Mraclin, Croatia</span><span>Tax no. 07767406016</span><span>Reg. no. 04083300</span></div>
     <div class="footer-meta"><a href="../o-tvrtki/">Company details</a><a class="site-credit" href="https://www.saltybrandstudio.com/en" target="_blank" rel="noopener">Strategy, UX, copy, design and website build: <strong>Salty Brand Studio</strong> ↗</a><span>© <i id="year"></i></span></div>
   </footer>
-  <script src="../script.js"></script>
+  <script src="../script.js?v=20261004-2"></script>
 </body>
 </html>
