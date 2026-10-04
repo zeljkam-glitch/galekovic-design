@@ -201,6 +201,7 @@ footer{grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
 .footer-legal{display:flex;flex-wrap:wrap;gap:6px 18px;color:rgba(255,255,255,.55);font-size:7px;line-height:1.45;letter-spacing:.07em}
 .footer-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 18px;font-size:8px}
 .footer-meta a{text-decoration:underline;text-underline-offset:4px}
+.footer-meta .internal-offer-link{text-decoration:none}
 .site-credit{white-space:normal}.site-credit strong{font-weight:600}
 
 @media(max-width:760px){
