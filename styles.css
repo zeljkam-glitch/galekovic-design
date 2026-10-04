@@ -228,3 +228,30 @@ footer{grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
   .scope-guardrails strong{margin:24px 0 12px;font-size:20px}
   .scope-guardrails p{margin:0;font-size:12px}
 }
+
+/* Responsive guardrails for long editorial headlines and the closing sections. */
+.panel h2,.process h2{max-width:100%;text-wrap:balance}
+
+@media(max-width:1240px) and (min-width:761px){
+  .newsletter-panel{grid-template-columns:1fr;gap:58px}
+  .newsletter-panel h2{max-width:920px;font-size:clamp(58px,7.2vw,84px)}
+  .newsletter-content{width:min(100%,760px)}
+  footer{grid-template-columns:auto minmax(0,1fr);gap:22px 34px;align-items:start}
+  .footer-meta{grid-column:1/-1;justify-content:flex-start}
+}
+
+@media(max-width:360px){
+  :root{--pad:18px}
+  .hero-content{padding-left:14px;padding-right:14px}
+  .hero h1{font-size:clamp(34px,14vw,48px);line-height:.98}
+  .panel h2,.process h2{font-size:clamp(27px,10.8vw,39px);line-height:1.03;letter-spacing:-.018em}
+  .service-grid h3,.article-card h3,.service-finder h3,.tool-card h3{font-size:30px}
+  .process-content{padding-left:18px;padding-right:18px}
+  .process li{grid-template-columns:56px minmax(0,1fr);gap:14px}
+  .newsletter-panel{gap:38px}
+  .newsletter-panel h2{margin-top:36px}
+  .newsletter-content>p{font-size:12px}
+  footer{padding-left:12px;padding-right:12px}
+  .footer-legal,.footer-meta{min-width:0}
+  .footer-meta a{overflow-wrap:anywhere}
+}
